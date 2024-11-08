@@ -7,8 +7,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.functions.OmniDrive;
 import org.firstinspires.ftc.teamcode.functions.SlideFunctions;
 
-@TeleOp(name="AlinaMain", group="Linear OpMode")
-public class AlinaMain extends LinearOpMode {
+@TeleOp(name="Main", group="Linear OpMode")
+public class Main extends LinearOpMode {
 
     public ElapsedTime runtime = new ElapsedTime();
 
