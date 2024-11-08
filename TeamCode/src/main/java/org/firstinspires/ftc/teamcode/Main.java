@@ -8,7 +8,7 @@ import org.firstinspires.ftc.teamcode.functions.OmniDrive;
 import org.firstinspires.ftc.teamcode.functions.SlideFunctions;
 
 @TeleOp(name="Main", group="Linear OpMode")
-public class Main extends LinearOpMode {
+public class  Main extends LinearOpMode {
 
     public ElapsedTime runtime = new ElapsedTime();
 
