@@ -22,20 +22,18 @@ public class SlideFunctions {
         armMotor.setDirection(DcMotor.Direction.FORWARD);
     }
 
-    public SlideFunctions() {
-
-    }
 
     public void SlidePosition(Gamepad gamepad1, Gamepad gamepad2, Telemetry telemetry){
 
-        double slidePowerConst = 0.7;
+        double slidePowerConst = 0.7; //max power of slide
         double slidePower = -gamepad2.left_stick_y;
 
+        //insert slide safety stuff here >.<
 
         slideMotor.setPower(slidePower * slidePowerConst);
 
+        //display of power and position of motor
         int slidePosition= slideMotor.getCurrentPosition();
-
         telemetry.addData("Slide power","%4.2f", slidePower);
         telemetry.addData("Slide Position", slidePosition);
 
