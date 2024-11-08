@@ -12,13 +12,11 @@ public class SlideFunctions {
 
     public DcMotor slideMotor;
     public DcMotor armMotor;
-    public TouchSensor slideSafety;
 
     public SlideFunctions(HardwareMap hardwareMap) {
 
         slideMotor = hardwareMap.get(DcMotor.class, "slide_motor");
         armMotor = hardwareMap.get(DcMotor.class, "arm_motor");
-        slideSafety = hardwareMap.get(TouchSensor.class, "slide_safety");
 
         slideMotor.setDirection(DcMotor.Direction.REVERSE);
         armMotor.setDirection(DcMotor.Direction.FORWARD);
@@ -33,9 +31,6 @@ public class SlideFunctions {
         double slidePowerConst = 0.7;
         double slidePower = -gamepad2.left_stick_y;
 
-        if (!slideSafety.isPressed() && slidePower > 0){
-            slidePower=0;
-        }
 
         slideMotor.setPower(slidePower * slidePowerConst);
 
